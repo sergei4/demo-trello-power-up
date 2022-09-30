@@ -8,7 +8,8 @@ TrelloPowerUp.initialize(
                     //callback: copySummary,
                     callback: function (t) {
                         return t.popup({
-                                title: "Simple popup"
+                                title: "Simple popup",
+                                date: "2022.09.30"
                             }
                         )
                     }
