@@ -137,7 +137,7 @@ const getBadges = function (t) {
         });
 };
 
-var boardButtonCallback = function (t) {
+const boardButtonCallback = function (t) {
     return t.popup({
         title: 'Popup List Example',
         items: [
@@ -192,7 +192,7 @@ var boardButtonCallback = function (t) {
     });
 };
 
-var restApiCardButtonCallback = function (t) {
+const restApiCardButtonCallback = function (t) {
     return t.getRestApi()
         .isAuthorized()
         .then(function (authorized) {
@@ -233,7 +233,7 @@ var restApiCardButtonCallback = function (t) {
         });
 }
 
-var cardButtonCallback = function (t) {
+const cardButtonCallback = function (t) {
     // Trello Power-Up Popups are actually pretty powerful
     // Searching is a pretty common use case, so why reinvent the wheel
     var items = ['acad', 'arch', 'badl', 'crla', 'grca', 'yell', 'yose'].map(function (parkCode) {
@@ -512,7 +512,7 @@ TrelloPowerUp.initialize({
 
         // If we want to ask the user to authorize our Power-Up to make full use of the Trello API
         // you'll need to add your API from trello.com/app-key below:
-        let trelloAPIKey = '';
+        const trelloAPIKey = '';
         // This key will be used to generate a token that you can pass along with the API key to Trello's
         // RESTful API. Using the key/token pair, you can make requests on behalf of the authorized user.
 
