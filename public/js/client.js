@@ -37,28 +37,42 @@ TrelloPowerUp.initialize(
              */
 
             // You can also return the object synchronously if you know the answer synchronously.
-            return {authorized: false}
+            //return {authorized: false}
+            return t.getRestApi()
+                .isAuthorized()
+                .then((authorized) => {
+                    return {authorized: authorized}
+                })
         },
         'show-authorization': function (t, options) {
-            // Returns what to do when a user clicks the 'Authorize Account' link from the Power-Up gear icon
-            // which shows when 'authorization-status' returns { authorized: false }.
-
-            // If we want to ask the user to authorize our Power-Up to make full use of the Trello API
-            // you'll need to add your API from trello.com/app-key below:
-            const trelloAPIKey = '';
-            // This key will be used to generate a token that you can pass along with the API key to Trello's
-            // RESTful API. Using the key/token pair, you can make requests on behalf of the authorized user.
-
-            // In this case we'll open a popup to kick off the authorization flow.
-            if (trelloAPIKey) {
-                return t.popup({
-                    title: 'My Auth Popup',
-                    args: {apiKey: trelloAPIKey}, // Pass in API key to the iframe
-                    url: './authorize.html', // Check out public/authorize.html to see how to ask a user to auth
-                    height: 140,
-                });
-            } else {
-                console.log("🙈 Looks like you need to add your API key to the project!");
-            }
+            // // Returns what to do when a user clicks the 'Authorize Account' link from the Power-Up gear icon
+            // // which shows when 'authorization-status' returns { authorized: false }.
+            //
+            // // If we want to ask the user to authorize our Power-Up to make full use of the Trello API
+            // // you'll need to add your API from trello.com/app-key below:
+            // const trelloAPIKey = '';
+            // // This key will be used to generate a token that you can pass along with the API key to Trello's
+            // // RESTful API. Using the key/token pair, you can make requests on behalf of the authorized user.
+            //
+            // // In this case we'll open a popup to kick off the authorization flow.
+            // if (trelloAPIKey) {
+            //     return t.popup({
+            //         title: 'My Auth Popup',
+            //         args: {apiKey: trelloAPIKey}, // Pass in API key to the iframe
+            //         url: './authorize.html', // Check out public/authorize.html to see how to ask a user to auth
+            //         height: 140,
+            //     });
+            // } else {
+            //     console.log("🙈 Looks like you need to add your API key to the project!");
+            // }
+            return t.popup({
+                title: 'Authorization',
+                url: './authorize.html', // Check out public/authorize.html to see how to ask a user to auth
+                height: 140,
+            });
         }
+    },
+    {
+        appKey: '2e352aee3a879f98d68f78d39c934d6c',
+        appName: 'Demo trello power-up'
     });
