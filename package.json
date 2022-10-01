@@ -1,6 +1,6 @@
 {
     "name": "power-up",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "A sample Trello Power-Up that can be used as a starting point for your own awesome Power-Up.",
     "main": "server.js",
     "scripts": {
@@ -12,7 +12,8 @@
       "cors": "^2.8.5",
       "express": "^4.16.2",
       "confetti-js": "^0.0.15",
-      "react-scripts": "5.0.1"
+      "react-scripts": "5.0.1",
+      "dotenv": "16.0.3"
     },
     "engines": {
       "node": "12"

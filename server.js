@@ -4,7 +4,6 @@
 const compression = require('compression');
 const cors = require('cors');
 const express = require('express');
-const react_scripts = require('react-scripts');
 
 const app = express();
 
@@ -21,4 +20,5 @@ app.use(express.static('public'));
 const listener = app.listen(process.env.PORT, function () {
   console.info(`Node Version: ${process.version}`);
   console.log('Trello Power-Up Server listening on port ' + listener.address().port);
+  console.log(`Trello app-key: ${process.env.REACT_APP_TRELLO_APP_KEY}`);
 });
