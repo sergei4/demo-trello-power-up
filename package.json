@@ -12,7 +12,6 @@
       "cors": "^2.8.5",
       "express": "^4.16.2",
       "confetti-js": "^0.0.15",
-      "react-scripts": "5.0.1",
       "dotenv": "16.0.3"
     },
     "engines": {

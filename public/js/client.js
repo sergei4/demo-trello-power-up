@@ -60,6 +60,6 @@ TrelloPowerUp.initialize(
         }
     },
     {
-        appKey: process.env.REACT_APP_TRELLO_APP_KEY,
-        appName: process.env.REACT_APP_TRELLO_APP_NAME,
+        appKey: "2e352aee3a879f98d68f78d39c934d6c",
+        appName: "Trello",
     });
