@@ -61,5 +61,5 @@ TrelloPowerUp.initialize(
     },
     {
         appKey: "2e352aee3a879f98d68f78d39c934d6c",
-        appName: "Trello",
+        appName: "UIT Workflow power-up",
     });
