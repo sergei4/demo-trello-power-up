@@ -4,6 +4,7 @@
 const compression = require('compression');
 const cors = require('cors');
 const express = require('express');
+const react_scripts = require('react-scripts');
 
 const app = express();
 
