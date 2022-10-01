@@ -1,4 +1,3 @@
-
 <html>
 <head>
     <link rel="stylesheet" href="https://p.trellocdn.com/power-up.min.css">
@@ -6,7 +5,8 @@
 <body>
 <div id="content">
     <h3>GitLab integration</h3>
-    <p>In order for the GitLab Power-Up to work, we need to know your personal access token. Please provide your token below.</p>
+    <p>In order for the GitLab Power-Up to work, we need to know your personal access token. Please provide your token
+        below.</p>
     <div>
         <span>GitLab endpoint: </span>
         <pre>https://gitlab.com/api/v4/</pre>
@@ -15,9 +15,10 @@
     <div class="input-group">
         <label for="token-input">
             Personal Access Token
-            (<a href="https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html" target="_blank" rel="noopener noreferrer">Need help?</a>)
+            (<a href="https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html" target="_blank"
+                rel="noopener noreferrer">Need help?</a>)
         </label>
-        <input id="token-input" type="text" placeholder="Placeholder token" autocomplete="off" />
+        <input id="token-input" type="text" placeholder="Placeholder token" autocomplete="off"/>
         <div class="invalid-note">This token is invalid</div>
     </div>
     <button type="button" class="save-btn mod-primary" disabled>Save</button>
@@ -30,5 +31,16 @@
 <!--<script src="./scripts/merge_request.js"></script>-->
 <!--<script src="./scripts/popup.js"></script>-->
 <!--<script src="./scripts/configure.js"></script>-->
+<script>
+    const t = window.TrelloPowerUp.iframe(
+        {
+            appKey: '2e352aee3a879f98d68f78d39c934d6c',
+            appName: 'Trello'
+        })
+    t.render(function (t){
+        t.sizeTo("#content")
+    })
+
+</script>
 </body>
 </html>
