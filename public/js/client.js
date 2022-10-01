@@ -13,7 +13,11 @@ TrelloPowerUp.initialize(
                         return [
                             {
                                 text: "GitLab settings",
-                                callback: function () {
+                                callback: function (t) {
+                                    return t.popup({
+                                        title: "Configuration",
+                                        url: "./gitlab-settings.html"
+                                    })
                                 }
                             }
                         ]
