@@ -9,15 +9,15 @@ TrelloPowerUp.initialize(
             return t.getRestApi()
                 .isAuthorized()
                 .then((authorized) => {
-                    if(authorized) {
+                    if (authorized) {
                         return [
                             {
                                 text: "GitLab settings",
-                                callback: function () {}
+                                callback: function () {
+                                }
                             }
                         ]
-                    }
-                    else {
+                    } else {
                         return []
                     }
                 })
@@ -60,5 +60,6 @@ TrelloPowerUp.initialize(
         }
     },
     {
-        appKey: '2e352aee3a879f98d68f78d39c934d6c'
+        appKey: process.env.REACT_APP_TRELLO_APP_KEY,
+        appName: process.env.REACT_APP_TRELLO_APP_NAME,
     });
